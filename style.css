@@ -59,6 +59,7 @@ main{
     flex-direction: column;
     width: 25%;
     gap: 2%;
+    z-index: 999;
 }
 
 .btn-posts{
@@ -127,6 +128,7 @@ main{
 
 .posts article{
     display: flex;
+    position: relative;
     background-color: white;
     align-items: center;
     gap: 2%;
@@ -176,6 +178,17 @@ main{
 
 .posts:not(h3){
     font-weight: 300;
+}
+
+.posts article:after{
+    content: " ";
+    position: absolute;
+    right: 2%;
+    background-image: url('../img/more-details.svg');
+    background-repeat: no-repeat;
+    background-size: 3vmin 3vmin;
+    height: 4vmin;
+    width: 4vmin;
 }
 
 aside{
