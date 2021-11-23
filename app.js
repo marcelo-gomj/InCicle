@@ -3,14 +3,15 @@ const query = (ele) => document.querySelector(ele)
 
 const boxPost = query('.posts');
 
+// get the informations of /data.json
 async function getPosts(){
     const data = await fetch('/data.json');
     if(data.ok) return data.json();
 }
 
+// create posts card
 async function addMainPosts(){
     const posts = await getPosts();
-    console.log(posts)
     posts.data.map(item => createCard(item));
 }
 
@@ -35,6 +36,7 @@ function getMoreDetails(info) {
     }
 }
 
+// Add elements in DOM
 function createCard(item){
     const div = document.createElement('div');
     const elements = [
@@ -54,18 +56,18 @@ function createCard(item){
 
 addMainPosts();
 
+// Add btns actions
 const btnAbout = query('.bar-about button');
 function hideAbout(e){
     e.target.parentElement.style.display = 'none';
 }
+
 btnAbout.addEventListener('click', hideAbout)
 
-
 const list = query('.type-list');
-
 (function() {
     const btnSort = query('.btn-sort')
-    btnSort.addEventListener('click', (e) =>{
+    btnSort.addEventListener('click', () =>{
         list.classList.toggle('hidden-list');
     })
     

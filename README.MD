@@ -1,1 +1,5 @@
-;
+# TESTE
+
+## Como iniciar a aplicacão:
+
+- Abra o InCicle.html no navegador
