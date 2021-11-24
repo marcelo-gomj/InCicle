@@ -183,7 +183,7 @@ main{
 .posts article:after{
     content: " ";
     position: absolute;
-    right: 2%;
+    right: 1%;
     background-image: url('../img/more-details.svg');
     background-repeat: no-repeat;
     background-size: 3vmin 3vmin;

@@ -30,8 +30,9 @@ function getTypePost(type) {
     }
 }
 
+// Verify invited people
 function getMoreDetails(info) {
-    const convited = info.invited_people
+    const convited = info.invited_people;
     if(convited){
         const confirmed = convited.filter(people => people.confirmed);
         return `${confirmed.length} CONFIRMAÇÕES DE ${convited.length}`;
